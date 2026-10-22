@@ -1,0 +1,231 @@
+{
+  "created_at_utc": "2026-10-22T21:33:25.719159+00:00",
+  "source_sha256": "30c6be3abd8dcfd3e6096c828bad8c2f011238620f5369220bd60cfc82700933",
+  "seed": 42,
+  "splits": {
+    "test": {
+      "rows": 4480,
+      "default_rate": 0.215625
+    },
+    "calibration": {
+      "rows": 4473,
+      "default_rate": 0.22892913033758105
+    },
+    "validation": {
+      "rows": 4554,
+      "default_rate": 0.22727272727272727
+    },
+    "train": {
+      "rows": 16493,
+      "default_rate": 0.21894136906566422
+    }
+  },
+  "excluded_features": [
+    "ID",
+    "SEX",
+    "EDUCATION",
+    "MARRIAGE",
+    "AGE"
+  ],
+  "duplicate_financial_profiles": 817,
+  "duplicate_groups_cross_partitions": 0,
+  "candidates": [
+    {
+      "max_depth": 2,
+      "n_estimators": 250,
+      "validation_average_precision": 0.5410955231241068
+    },
+    {
+      "max_depth": 3,
+      "n_estimators": 250,
+      "validation_average_precision": 0.542344216136428
+    },
+    {
+      "max_depth": 4,
+      "n_estimators": 250,
+      "validation_average_precision": 0.5374964013164016
+    }
+  ],
+  "selected_candidate": {
+    "max_depth": 3,
+    "n_estimators": 250,
+    "validation_average_precision": 0.542344216136428
+  },
+  "threshold": 0.22,
+  "cost_assumptions": {
+    "missed_default": 5,
+    "each_review": 1,
+    "units": "illustrative cost units; not currency"
+  },
+  "test_metrics": {
+    "Prevalence baseline": {
+      "roc_auc": 0.5,
+      "average_precision": 0.215625,
+      "brier_score": 0.1691418576787797,
+      "log_loss": 0.521346907098276,
+      "precision": 0.0,
+      "recall": 0.0,
+      "confusion_matrix": [
+        [
+          3514,
+          0
+        ],
+        [
+          966,
+          0
+        ]
+      ]
+    },
+    "Logistic Regression": {
+      "roc_auc": 0.7222858050200853,
+      "average_precision": 0.4862245494428096,
+      "brier_score": 0.14408612818370553,
+      "log_loss": 0.46184685129924097,
+      "precision": 0.36217765042979944,
+      "recall": 0.6542443064182195,
+      "confusion_matrix": [
+        [
+          2401,
+          1113
+        ],
+        [
+          334,
+          632
+        ]
+      ]
+    },
+    "XGBoost raw": {
+      "roc_auc": 0.7797850302428263,
+      "average_precision": 0.551058461310528,
+      "brier_score": 0.13305802643299103,
+      "log_loss": 0.42427803459655866,
+      "precision": 0.471107544141252,
+      "recall": 0.6076604554865425,
+      "confusion_matrix": [
+        [
+          2855,
+          659
+        ],
+        [
+          379,
+          587
+        ]
+      ]
+    },
+    "XGBoost calibrated": {
+      "roc_auc": 0.7797850302428263,
+      "average_precision": 0.551058461310528,
+      "brier_score": 0.1331958986119896,
+      "log_loss": 0.42462420475620277,
+      "precision": 0.4602102102102102,
+      "recall": 0.634575569358178,
+      "confusion_matrix": [
+        [
+          2795,
+          719
+        ],
+        [
+          353,
+          613
+        ]
+      ]
+    }
+  },
+  "confidence_intervals_95": {
+    "roc_auc": [
+      0.7626596611546064,
+      0.7970534959007076
+    ],
+    "average_precision": [
+      0.5155730173921654,
+      0.584634340881343
+    ]
+  },
+  "test_policy": {
+    "threshold": 0.22,
+    "cost_per_customer": 0.6912946428571428,
+    "missed_defaults": 353,
+    "reviews": 1332,
+    "review_rate": 0.29732142857142857
+  },
+  "subgroups": [
+    {
+      "attribute": "SEX",
+      "group": "Female",
+      "n": 2718,
+      "defaults": 555,
+      "default_rate": 0.2041942604856512,
+      "mean_prediction": 0.21540599216320377,
+      "review_rate": 0.2788815305371597,
+      "true_positive_rate": 0.6144144144144145,
+      "false_positive_rate": 0.1927877947295423
+    },
+    {
+      "attribute": "SEX",
+      "group": "Male",
+      "n": 1762,
+      "defaults": 411,
+      "default_rate": 0.23325766174801363,
+      "mean_prediction": 0.23450999948117576,
+      "review_rate": 0.3257661748013621,
+      "true_positive_rate": 0.6618004866180048,
+      "false_positive_rate": 0.22353811991117692
+    },
+    {
+      "attribute": "AGE",
+      "group": "30\u201344",
+      "n": 2248,
+      "defaults": 467,
+      "default_rate": 0.20774021352313168,
+      "mean_prediction": 0.20909421747971818,
+      "review_rate": 0.2775800711743772,
+      "true_positive_rate": 0.6252676659528907,
+      "false_positive_rate": 0.18641212801796744
+    },
+    {
+      "attribute": "AGE",
+      "group": "Under 30",
+      "n": 1419,
+      "defaults": 316,
+      "default_rate": 0.222692036645525,
+      "mean_prediction": 0.24113956489116076,
+      "review_rate": 0.3128964059196617,
+      "true_positive_rate": 0.6265822784810127,
+      "false_positive_rate": 0.2230281051677244
+    },
+    {
+      "attribute": "AGE",
+      "group": "45\u201359",
+      "n": 754,
+      "defaults": 172,
+      "default_rate": 0.22811671087533156,
+      "mean_prediction": 0.22683000852748528,
+      "review_rate": 0.3209549071618037,
+      "true_positive_rate": 0.6686046511627907,
+      "false_positive_rate": 0.218213058419244
+    },
+    {
+      "attribute": "AGE",
+      "group": "60+",
+      "n": 59,
+      "defaults": 11,
+      "default_rate": 0.1864406779661017,
+      "mean_prediction": 0.26151586238528984,
+      "review_rate": 0.3728813559322034,
+      "true_positive_rate": 0.7272727272727273,
+      "false_positive_rate": 0.2916666666666667
+    }
+  ],
+  "calibration": {
+    "slope": 1.0451178991311634,
+    "intercept": 0.11607934557287491
+  },
+  "versions": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.8.0",
+    "xgboost": "3.4.1",
+    "shap": "0.54.1",
+    "streamlit": "1.66.1"
+  }
+}
