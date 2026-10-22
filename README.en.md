@@ -18,16 +18,9 @@ An interactive Python application for analysing next-month payment default risk 
 
 ## Application preview
 
-![CreditLens portfolio overview](docs/screenshots/overview-tr.jpeg)
+![CreditLens portfolio overview](docs/screenshots/overview-en.jpeg)
 
-*Current application in Safari on macOS, shown with the Turkish language setting. German is the default; English and Turkish are available in the sidebar.*
-
-<details>
-<summary>View model comparison, calibration and confusion matrix</summary>
-
-![CreditLens model validation](docs/screenshots/model-validation-tr.jpeg)
-
-</details>
+*Portfolio overview with the English interface. German and Turkish are also available in the language menu.*
 
 ## Measured results
 

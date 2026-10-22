@@ -18,16 +18,9 @@ Eine interaktive Python-Anwendung zur Analyse des Zahlungsausfallrisikos bestehe
 
 ## Einblick in die Anwendung
 
-![CreditLens: Portfolioübersicht](docs/screenshots/overview-tr.jpeg)
+![CreditLens: Portfolioübersicht](docs/screenshots/overview-de.jpeg)
 
-*Aktuelle Anwendung in Safari auf macOS; hier mit türkischer Spracheinstellung. Deutsch ist die Standardsprache, Englisch und Türkisch sind im Menü verfügbar.*
-
-<details>
-<summary>Modellvergleich, Kalibrierung und Konfusionsmatrix anzeigen</summary>
-
-![CreditLens: Modellvalidierung](docs/screenshots/model-validation-tr.jpeg)
-
-</details>
+*Portfolioübersicht mit deutscher Benutzeroberfläche. Englisch und Türkisch sind ebenfalls im Sprachmenü verfügbar.*
 
 ## Gemessene Ergebnisse
 
