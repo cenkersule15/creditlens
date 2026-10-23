@@ -1,6 +1,6 @@
 # CreditLens · Explainable Credit Risk
 
-[Deutsch](README.md) | **English**
+[Deutsch](README.md) | **English** | [Türkçe](README.tr.md)
 
 An interactive Python application for analysing next-month payment default risk among existing credit-card customers. CreditLens combines machine learning with individual explanations, an illustrative policy cost simulator and data monitoring.
 
